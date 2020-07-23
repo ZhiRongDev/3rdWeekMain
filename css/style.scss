@@ -289,5 +289,151 @@ img{
         }
     }
 }
+footer{
+    background-color: #EAF0ED;
+}
+.footer-email{
+    background-color: #3F5D45;
+    .wrap{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #EAF0ED;
+        padding: 38px 0;
+    }
+}
+.email-text{
+    display: flex;
+    align-items: center;
+    img{
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin-right: 20px; 
+    }
+    h3{
+        font-size: 24px;
+        line-height: 29px; 
+    }
 
+}
+.form-container{
+    background-color: #EAF0ED;
+    display: flex;
+    align-items: center;
+    width: 40%;
+    img{
+        width: 24px;
+        height: 24px;
+        margin: 16px 20px;
+    }
+    input[type=email]{
+        width:100%;      // input 不下 width 100% 就無法自適應寬度? (會出現 x 軸) 
+        display: block;          
+        border: none;
+        padding: 16px;
+        background-color: #EAF0ED;
+    }
+    .btn{
+        flex-shrink: 0;    //加上這行寬度就正常了
+        display: block;
+        background-image: url(https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/arrow_forward-24px.png);
+        width: 64px;      //為何無法正常顯示寬度? 
+        height: 56px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-color: #FFE180;
+        border: none;
+        cursor: pointer;
+    }
+}
+@media(max-width: 768px){
+    .footer-email{
+        .wrap{
+            flex-direction: column;
+        }     
+    }
+    .email-text{
+        margin-bottom: 30px;
+    }
+    .form-container{
+        width: 80%;
+    }
+}
+@media(max-width: 600px){
+    .email-text{
+        h3{
+            font-size: 20px;
+        }
+    }
+}
+.footer-info{
+    display: flex;
+    justify-content: space-between; 
+    padding: 40px 0;
 
+}
+.footer-left{
+    ul{
+        margin-bottom: 30px;
+    }
+    li{
+        line-height: 24px;
+        color: #3F5D45;
+    }
+}
+.footerLogo{
+    display: block;
+    max-width: 171px;
+    margin-bottom: 115px;
+}
+.footerLinks{
+    display: flex;
+    a{
+        display: block;
+        margin-right: 10px;
+    }
+    img{
+        width: 32px;
+        height: 32px;      
+    }
+}
+.footer-right{
+    h2{
+        -webkit-writing-mode: vertical-rl;
+        writing-mode: vertical-rl;
+        font-size: 24px;
+        line-height: 30px;
+        letter-spacing: 6.5px;
+        font-family: 'Noto Serif TC', serif;
+        color: #3F5D45;
+        float: right;
+    }
+    p{
+        color: #3F5D45;
+        clear: both; 
+    }
+}
+@media (max-width: 768px){
+    .footer-info{
+        flex-direction: column;
+        padding-left: 10%;
+    }
+    .footerLogo{
+        margin-bottom: 40px;
+    }
+    .footer-right{
+        h2{
+            display: none;
+        }
+    }
+    .footerLinks{
+        margin-bottom: 20px;
+    }
+}
+@media (max-width: 940px) {
+    .header, .footer-email .wrap, .footer-info{
+        padding-right: 4%;
+        padding-left: 4%;
+    }
+}
