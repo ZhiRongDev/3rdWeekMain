@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@900&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
     <title>第三周 RWD</title>
 </head>
 <body>
     <div class="wrap">
-      <header class="header">
+      <header class="header" data-aos="fade-down">
         <a href="#" class="burger-Menu"></a>
         <a href="#" class="header-img"><h1>Sweetaste六角甜點</h1></a>
         <ul>
@@ -20,8 +21,8 @@
         </ul>
       </header>
       
-      <img class="banner" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/banner.png" alt="想吃甜點，是不需要理由的!">
-      <main>
+      <img data-aos="fade-right" class="banner" src="https://raw.githubusercontent.com/hexschool/webLayoutTraining1st/master/student-week1/banner.png" alt="想吃甜點，是不需要理由的!">
+      <main data-aos="fade-up">
         <div class="content">
           <ul class="aside">
             <li>甜點類別</li>
@@ -102,7 +103,7 @@
         </ul>
       </main> 
     </div>
-    <footer>
+    <footer data-aos="fade-up">
       <div class="footer-email">
         <div class="wrap">
           <div class="email-text">
@@ -141,5 +142,12 @@
         </div>
       </div> 
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+      AOS.init({
+        once: true
+      });
+    </script>
 </body>
 </html>
